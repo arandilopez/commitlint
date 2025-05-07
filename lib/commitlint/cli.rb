@@ -51,7 +51,7 @@ module Commitlint
           @options[:message] = message.nil? ? ".git/COMMIT_EDITMSG" : message
         end
 
-        opts.on("-q", "--quite", "Suppress output") { @options[:quite] = true }
+        opts.on("-q", "--quiet", "Suppress output") { @options[:quiet] = true }
         opts.on("-h", "--help", "Show this help message") { puts opts }
         opts.on("-v", "--version", "Show version") { puts Commitlint::VERSION }
       end
