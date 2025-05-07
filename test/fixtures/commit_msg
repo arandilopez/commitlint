@@ -1,8 +1,10 @@
-feat(ui): new ui with tailwindcss
+fix: prevent racing of requests
 
-Descriptions of the changes made in the commit.
-Tailwind CSS is a utility-first CSS framework for creating custom designs is added
+Introduce a request id and a reference to latest request. Dismiss
+incoming responses other than from latest request.
 
-BREAKING CHANGE: tailwindcss is added
+Remove timeouts which were used to mitigate the racing issue but are
+obsolete now.
 
-# This is a comment
+Reviewed-by: Z
+Refs: #123
