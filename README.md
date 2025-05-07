@@ -38,7 +38,7 @@ commit-msg:
 
 In fact, this repository lints its own commit messages using this gem.
 
-## Feautures
+## Configuration
 
 This gem does not require any configuration. It will lint your commit messages and that's it.
 I'm not planning to add any configuration options, because I think that the default behavior and rules are good enough.
