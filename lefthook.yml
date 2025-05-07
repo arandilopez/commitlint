@@ -1,5 +1,5 @@
 pre-commit:
-  parallel: true
+  # parallel: true
   jobs:
     - name: rubocop
       glob: "*.rb"
@@ -8,4 +8,4 @@ pre-commit:
 commit-msg:
   jobs:
     - name: Lint commit message
-      run: ./exe/commitlint -m {1}
+      run: ./exe/commitlint --message {1}
