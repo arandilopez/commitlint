@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: rubocop
+      glob: "*.rb"
+      run: rake rubocop {staged_files}
+
+commit-msg:
+  jobs:
+    - name: Lint commit message
+      run: ./exe/commitlint -m {1}

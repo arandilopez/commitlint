@@ -1,0 +1,57 @@
+PATH
+  remote: .
+  specs:
+    commitlint (0.1.0)
+      optparse
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.3)
+    json (2.11.3)
+    language_server-protocol (3.17.0.4)
+    lefthook (1.11.12)
+    lint_roller (1.1.0)
+    minitest (5.25.5)
+    optparse (0.3.1)
+    parallel (1.27.0)
+    parser (3.3.8.0)
+      ast (~> 2.4.1)
+      racc
+    prism (1.4.0)
+    racc (1.8.1)
+    rainbow (3.1.1)
+    rake (13.2.1)
+    regexp_parser (2.10.0)
+    rubocop (1.75.5)
+      json (~> 2.3)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
+      parallel (~> 1.10)
+      parser (>= 3.3.0.2)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.44.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.44.1)
+      parser (>= 3.3.7.2)
+      prism (~> 1.4)
+    ruby-progressbar (1.13.0)
+    unicode-display_width (3.1.4)
+      unicode-emoji (~> 4.0, >= 4.0.4)
+    unicode-emoji (4.0.4)
+
+PLATFORMS
+  arm64-darwin-22
+  ruby
+
+DEPENDENCIES
+  commitlint!
+  lefthook
+  minitest (~> 5.16)
+  rake (~> 13.0)
+  rubocop (~> 1.21)
+
+BUNDLED WITH
+   2.5.16
