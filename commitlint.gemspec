@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Conventional commint linter for Ruby projects"
   spec.description = "Lint your commit messages to ensure they follow the conventional commit format."
-  spec.homepage = "https://github.com/aranido/commitlint"
+  spec.homepage = "https://github.com/arandilopez/commitlint"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
