@@ -11,21 +11,29 @@ module Commitlint
     def lint!
       validator = Validator.new(@commit_message)
 
-      return 0 if validator.valid?
+      if validator.valid?
+        puts "Everything is look good!" if @output
+
+        return 0
+      end
 
       errors = validator.errors
 
-      puts <<~MESSAGE if @output
+      puts parse_errors(errors) if @output
+      1
+    end
+
+    private
+
+    def parse_errors(errors)
+      <<~MESSAGE
         \nYour commit message is invalid:
 
         #{errors.map { |e| "=> #{e}" }.join("\n")}
 
         Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint\n
       MESSAGE
-      1
     end
-
-    private
 
     def clean_commit_message(message)
       message.strip.gsub(/#.*$/, "").strip
