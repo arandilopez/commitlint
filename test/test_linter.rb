@@ -2,12 +2,12 @@
 
 class TestLinter < Minitest::Test
   def test_lint_valid_commit_message
-    linter = Commitlint::Linter.new("feat: add new feature")
+    linter = Commitlint::Linter.new("feat: add new feature", output: false)
     assert_equal 0, linter.lint!
   end
 
   def test_lint_valid_commit_message_with_scope
-    linter = Commitlint::Linter.new("feat(core): add new feature")
+    linter = Commitlint::Linter.new("feat(core): add new feature", output: false)
     assert_equal 0, linter.lint!
   end
 
@@ -17,13 +17,13 @@ class TestLinter < Minitest::Test
 
       Some description of the feature
     MESSAGE
-    linter = Commitlint::Linter.new(valid_commit_message_with_body)
+    linter = Commitlint::Linter.new(valid_commit_message_with_body, output: false)
     assert_equal 0, linter.lint!
   end
 
   def test_lint_valid_commit_message_from_file
     file_with_valid_commit_message = "./test/fixtures/commit_msg"
-    linter = Commitlint::Linter.new(File.read(file_with_valid_commit_message))
+    linter = Commitlint::Linter.new(File.read(file_with_valid_commit_message), output: false)
     assert_equal 0, linter.lint!
   end
 
