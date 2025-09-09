@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    commitlint (0.2.0)
+    commitlint (0.3.0)
       optparse
 
 GEM
