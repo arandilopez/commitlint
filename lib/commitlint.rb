@@ -8,7 +8,7 @@ require_relative "commitlint/cli"
 module Commitlint
   class Error < StandardError; end
 
-  VALID_TYPES = %w[feat fix docs style refactor perf test chore revert].freeze
+  VALID_TYPES = %w[feat fix docs style refactor perf test chore revert deps].freeze
   CONVENTIONAL_COMMIT_SCHEMA = /(?x)
     ^(?<type>#{VALID_TYPES.join("|")})  # Type
     (\((?<scope>.*?)\))?                # Optional scope

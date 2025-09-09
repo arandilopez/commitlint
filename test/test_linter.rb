@@ -55,4 +55,11 @@ class TestLinter < Minitest::Test
     linter = Commitlint::Linter.new(invalid_subject, output: false)
     assert_equal 1, linter.lint!
   end
+
+  def test_deps_type
+    message = "deps: update dependencies"
+    linter = Commitlint::Linter.new(message, output: false)
+
+    assert_equal 0, linter.lint!
+  end
 end
